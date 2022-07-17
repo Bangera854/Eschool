@@ -1,4 +1,4 @@
-#Pending
+#Raw code
 @app.route('/contact')
 def contact():
     name=request.form.get('name')

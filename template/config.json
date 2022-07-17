@@ -1,0 +1,10 @@
+{
+    "param" :
+    {
+        "local_server": "True",
+        "local_uri": "mysql://root:home@localhost/database",
+        "prod_uri" : "mysql://root:home@localhost/database",
+        "gmail_user" : "gamatroz991@gmail.com",
+        "gmail_pass" : "Ba&-96diz"
+    }
+}

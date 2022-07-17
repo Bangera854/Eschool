@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+	<meta charset="UTF-8">
+	<title>E school</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!--<link href="{{ url_for('static', filename='/css/main.css') }}" rel="stylesheet">-->
+	<link href="static/css/main.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+	<!-- Bootstrap CSS -->
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+	<!-- Font Awesome CSS -->
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css'>
+
+	<style>
+        /*Theme*/
+        @import url("https://fonts.googleapis.com/css?family=Assistant:400,700|Playfair+Display:900");
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --clr-light: linear-gradient(to right, #8e9eab, #eef2f3);
+            --clr-dark: #00332a;
+            --clr-primary: linear-gradient(to right, #8e9eab, #eef2f3);
+            --clr-secondary: #c3fcf2;
+            --clr-accent: #ff7750;
+
+            --foreground: var(--clr-dark);
+            --background: var(--clr-light);
+
+            --ff-title: "Playfair Display", serif;
+            --ff-body: "Assistant", sans-serif;
+        }
+
+        .darkmode {
+            --clr-light: #777777;
+            --clr-dark: #110c11;
+            --clr-primary: #202302;
+            --clr-secondary: #00100d;
+            --clr-accent: #ff7750;
+
+            --foreground: var(--clr-light);
+            --background: var(--clr-dark);
+        }
+
+
+        body {
+            background: var(--background);
+            color: var(--foreground);
+            font-family: var(--ff-body);
+            line-height: 1.6;
+        }
+
+        .subtitle {
+            max-width: 600px;
+        }
+
+
+        .intro {
+            height: 80vh;
+            padding: 10em 0;
+            display: grid;
+            grid-template-columns: minmax(2em, 1fr) minmax(80vw, 860px) minmax(2em, 1fr);
+            background: linear-gradient(120deg, var(--clr-primary), var(--clr-secondary));
+            align-content: center;
+        }
+
+        .intro>* {
+            grid-column: 2 / 3;
+        }
+
+        .dark-mode-toggle {
+            position: absolute;
+            z-index: 100;
+            top: 11em;
+            right: 1em;
+            color: var(--foreground);
+            border: 2px solid currentColor;
+            padding: 4px;
+            background: transparent;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 30px;
+            height: 30px;
+        }
+
+        .click-here {
+            /* SVG icon from Font Awesome*/
+            width: 100px;
+            right: 1.5em;
+            position: absolute;
+            top: 3em;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Nav-->
+	<div class="custom-padding">
+		<nav>
+			<div class="logo">
+				<span>E </span>school
+			</div>
+			<ul class="menu-area">
+				<li>
+					<a href="/dashboard">Dashboard</a>
+				</li>
+				<li>
+					<a href="/course">Courses</a>
+				</li>
+				<li>
+					<a href="/books">Books</a>
+				</li>
+				<li>
+					<div class="dropdown">
+						<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+							data-bs-toggle="dropdown" aria-expanded="false">
+							Settings
+						</button>
+						<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+							<li><a class="dropdown-item" href="/logout" style="color: #333;">Log out</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="contact">Contact</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+
+    <!--Theme-->
+	<br>
+	<button id="dark-mode-toggle" class="dark-mode-toggle">
+        <svg width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 496"></svg>
+        </svg>
+    </button>
+    <div class="click-here">
+        <svg fill="var(--foreground)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 542.09 136.36"></svg>
+        </svg>
+    </div>
+	<br>
+    <!--Search Bar-->
+	<li>
+		<div class="input-group">
+			<input style="border-radius: 10px;" type="text" class="live-search-box" placeholder="search here" />
+			<ul class="live-search-list" type="None">
+				<li style="display: none; color:#fefae0;"><a href="/chemistry">Chemistry</a></li>
+				<li style="display: none; color:#fefae0;"><a href="/biology">Biology</a></li>
+				<li style="display: none; color:#fefae0;"><a href="/history">History</a></li>
+				<li style="display: none; color:#fefae0;"><a href="/physics">Physics</a></li>
+				<li style="display: none; color:#fefae0;"><a href="/music">Music</a></li>
+				<li style="display: none; color:#fefae0;"><a href="/programming">Programming</a></li>
+				<li style="display: none; color:#fefae0;"><a href="/designv">Design</a></li>
+                <li style="display: none; color:#fefae0;"><a href="/cn">Computer Networking</a></li>
+				<li style="display: none; color:#fefae0;"><a href="/ml">Machine Learning</a></li>
+				<li style="display: none; color:#fefae0;"><a href="/books">Books</a></li>
+			</ul>
+
+		</div>
+	</li>
+
+
+	<br>
+	<br>
+
+	{% block body %} {% endblock %}
+
+
+</body>
+
+
+
+<!--Search-->
+
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+	crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+	jQuery(document).ready(function ($) {
+
+		$('.live-search-list li').each(function () {
+			$(this).attr('data-search-term', $(this).text().toLowerCase());
+		});
+
+		$('.live-search-box').on('keyup', function () {
+
+			var searchTerm = $(this).val().toLowerCase();
+
+			$('.live-search-list li').each(function () {
+
+				if ($(this).filter('[data-search-term *= ' + searchTerm + ']').length > 0 || searchTerm.length < 1) {
+					$(this).show();
+				} else {
+					$(this).hide();
+				}
+
+			});
+
+		});
+
+	});
+</script>
+
+<!--Theme-->
+<script>
+    // check for saved 'darkMode' in localStorage
+let darkMode = localStorage.getItem('darkMode');
+
+const darkModeToggle = document.querySelector('#dark-mode-toggle');
+
+const enableDarkMode = () => {
+  // 1. Add the class to the body
+  document.body.classList.add('darkmode');
+  // 2. Update darkMode in localStorage
+  localStorage.setItem('darkMode', 'enabled');
+}
+
+const disableDarkMode = () => {
+  // 1. Remove the class from the body
+  document.body.classList.remove('darkmode');
+  // 2. Update darkMode in localStorage 
+  localStorage.setItem('darkMode', null);
+}
+ 
+// If the user already visited and enabled darkMode
+// start things off with it on
+if (darkMode === 'enabled') {
+  enableDarkMode();
+}
+
+// When someone clicks the button
+darkModeToggle.addEventListener('click', () => {
+  // get their darkMode setting
+  darkMode = localStorage.getItem('darkMode'); 
+  
+  // if it not current enabled, enable it
+  if (darkMode !== 'enabled') {
+    enableDarkMode();
+  // if it has been enabled, turn it off  
+  } else {  
+    disableDarkMode(); 
+  }
+});
+
+</script>
+
+<!--Gsap-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+<script>gsap.fromTo("nav", {opacity: 0}, {opacity: 2, duration: 4, ease: 'power1.out'});</script>
+
+<!--Scrolltrigger-->
+<script>
+gsap.registerPlugin(ScrollTrigger)
+
+function init(){
+  gsap.to('.info div', {opcaity:0,scrollTrigger:{
+    trigger:'.info',
+    start:'top top'
+  }})
+}
+</script>
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+	integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+	crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+	integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+	crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+	integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+	crossorigin="anonymous"></script>
+    <!--Carousel-->
+<script>
+	(function ($) {
+		"use strict";
+		$('.next').click(function () { $('.carousel').carousel('next'); return false; });
+		$('.prev').click(function () { $('.carousel').carousel('prev'); return false; });
+	})
+		(jQuery);
+</script>
+
+</html>

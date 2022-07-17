@@ -1,0 +1,131 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="btn-group">
+	<button class="btn btn-secondary btn-sm" type="button">
+		Topic
+	</button>
+	<button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split"
+		data-bs-toggle="dropdown" aria-expanded="false">
+		<span class="visually-hidden">Toggle Dropdown</span>
+	</button>
+	<ul class="dropdown-menu">
+		<li><a class="dropdown-item" href="/designv">Design</a></li>
+		<li><a class="dropdown-item" href="/programming">Programming</a></li>
+    <li><a class="dropdown-item" href="/marketing">Marketing & Sales</a></li>
+		<li><a class="dropdown-item" href="/music">Music and Sound</a></li>
+		<li>
+			<hr class="dropdown-divider">
+		</li>
+		<li><a class="dropdown-item" href="/books">Books</a></li>
+	</ul>
+</div>
+<br>
+<br>
+<h2>Courses</h2>
+
+<br>
+<div class="card-deck">
+  <div class="card">
+    <iframe class="item" src="https://www.dailymotion.com/embed/video/x323mq9?"></iframe>
+    <div class="card-body">
+      <h5 class="card-title">Piet Programming Language</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
+        This content is a little bit longer.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <iframe class="item" src="https://www.youtube.com/embed/zOjov-2OZ0E"></iframe>
+    <div class="card-body">
+      <h5 class="card-title">Introduction to Programming and Computer Science</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <iframe class="item" src="https://www.dailymotion.com/embed/video/x2xsvcy?"></iframe>
+    <div class="card-body">
+      <h5 class="card-title">Swift Programming Language</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
+        This card has even longer content than the first to show that equal height action.</p>
+    </div>
+  </div>
+</div>
+
+<br>
+<div class="card-deck">
+  <div class="card">
+    <iframe class="item" src="https://www.youtube.com/embed/t_ispmWmdjY"></iframe>
+    <div class="card-body">
+      <h5 class="card-title">Ruby Programming Language</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
+        This content is a little bit longer.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <iframe class="item" src="https://www.youtube.com/embed/_uQrJ0TkZlc"></iframe>
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <iframe class="item" src="https://www.youtube.com/embed/oBt53YbR9Kk"></iframe>
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
+        This card has even longer content than the first to show that equal height action.</p>
+    </div>
+  </div>
+</div>
+
+
+<br>
+
+
+<div class="card-deck">
+  <div class="card">
+    <iframe class="item" src="https://www.youtube.com/embed/_bYFu9mBnr4"></iframe>
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
+        This content is a little bit longer.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <iframe class="item" src="https://www.youtube.com/embed/nzZkKoREEGo"></iframe>
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <iframe class="item" src="https://www.youtube.com/embed/ZSPZob_1TOk"></iframe>
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
+        This content is a little bit longer.</p>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<h2>Books</h2>
+<br>
+
+<div class="wrapper">
+	<div class="item"><a href="https://www.gutenberg.org/ebooks/27468">
+		<img src="{{ url_for('static', filename='/img/Programming/ibm.jpg') }}" alt="Forest" width="240" height="240"></a>
+    <h4>IBM 1401 Programming Systems</h4>
+	</div>
+	<div class="item"><a href="https://www.gutenberg.org/ebooks/29461">
+		<img src="{{ url_for('static', filename='/img/Programming/dbm.jpg') }}" alt="Forest" width="240" height="240"></a>
+    <h4>Preliminary Specifications: Programmed<br>
+       Data Processor Model Three (PDP-3)</h4>
+	</div>
+{% endblock %}

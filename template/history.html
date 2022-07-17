@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div class="btn-group">
+	<button class="btn btn-secondary btn-sm" type="button">
+		Topic
+	</button>
+	<button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split"
+		data-bs-toggle="dropdown" aria-expanded="false">
+		<span class="visually-hidden">Toggle Dropdown</span>
+	</button>
+	<ul class="dropdown-menu">
+		<li><a class="dropdown-item" href="/history">History</a></li>
+		<li><a class="dropdown-item" href="/chemistry">Chemistry</a></li>
+		<li><a class="dropdown-item" href="/biology">Biology</a></li>
+		<li><a class="dropdown-item" href="/physics">Physics</a></li>
+		<li>
+			<hr class="dropdown-divider">
+		</li>
+		<li><a class="dropdown-item" href="/course">Course</a></li>
+	</ul>
+</div>
+
+<br>
+
+<h2>History</h2>
+<br>
+
+<div class="wrapper">
+	<div class="item"><a href="https://www.gutenberg.org/ebooks/2850">
+		<img src="{{ url_for('static', filename='/img/History/History1.jpg') }}" alt="Forest" width="240" height="240"></a>
+	</div>
+	<div class="item"><a href="https://manybooks.net/titles/wellshgother08Outline_of_History.html">
+		<img src="{{ url_for('static', filename='/img/History/OH.jpg') }}" alt="Forest" width="240" height="240"></a>
+	</div>
+	<div class="item"><a href="https://manybooks.net/titles/watersc2472624726-8.html">
+		<img src="{{ url_for('static', filename='/img/History/Clara.jpg') }}" alt="Forest" width="240" height="240"></a>
+	</div>
+	<div class="item"><a href="https://manybooks.net/titles/dasguptas12951295612956-8.html">
+		<img src="{{ url_for('static', filename='/img/History/Indian.jpg') }}" alt="Forest" width="240" height="240"></a>
+	</div>
+	<div class="item"><a href="https://manybooks.net/titles/beamishr1899318993.html">
+		<img src="{{ url_for('static', filename='/img/History/WW.jpg') }}" alt="Forest" width="240" height="240"></a>
+	</div>
+	<div class="item"><a href="https://www.gutenberg.org/ebooks/205">
+		<img src="{{ url_for('static', filename='/img/History/Walden.jpg') }}" alt="Forest" width="240" height="240"></a>
+	</div>
+	<div class="item"><a href="https://manybooks.net/titles/mahana1352913529-8.html">
+		<img src="{{ url_for('static', filename='/img/History/Sea.jpg') }}" alt="Forest" width="240" height="240"></a>
+	</div>
+</div>
+
+{% endblock %}

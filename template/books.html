@@ -1,0 +1,198 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+<div class="btn-group">
+	<button class="btn btn-secondary btn-sm" type="button">
+		Topic
+	</button>
+	<button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split"
+		data-bs-toggle="dropdown" aria-expanded="false">
+		<span class="visually-hidden">Toggle Dropdown</span>
+	</button>
+	<ul class="dropdown-menu">
+		<li><a class="dropdown-item" href="/history">History</a></li>
+		<li><a class="dropdown-item" href="/chemistry">Chemistry</a></li>
+		<li><a class="dropdown-item" href="/biology">Biology</a></li>
+		<li><a class="dropdown-item" href="/physics">Physics</a></li>
+		<li>
+			<hr class="dropdown-divider">
+		</li>
+		<li><a class="dropdown-item" href="/course">Course</a></li>
+	</ul>
+</div>
+
+<br>
+
+<h1>Popular Books</h1>
+<br>
+
+<div class="wrapper">
+	<div class="item"><a href="https://www.gutenberg.org/ebooks/65989">
+			<img src="{{ url_for('static', filename='/img/PB/Histories.jpeg') }}" alt="Forest" width="240"
+				height="240"></a>
+	</div>
+	<div class="item"><a href="https://www.gutenberg.org/ebooks/27468">
+			<img src="{{ url_for('static', filename='/img/PB/Ibm.jpg') }}" alt="Forest" width="240" height="240"></a>
+	</div>
+	<div class="item"><a href="https://www.gutenberg.org/ebooks/212">
+			<img src="{{ url_for('static', filename='/img/PB/math.jpg') }}" alt="Forest" width="240" height="240"></a>
+	</div>
+	<div class="item"><a href="https://manybooks.net/titles/levystevetext96hckrs10.html">
+			<img src="{{ url_for('static', filename='/img/PB/hackers.jpg') }}" alt="Forest" width="240"
+				height="240"></a>
+	</div>
+	<div class="item"><a href="https://manybooks.net/titles/digital_equipment_corporation2946129461-8.html">
+			<img src="{{ url_for('static', filename='/img/PB/Program.jpeg') }}" alt="Forest" width="240"
+				height="240"></a>
+	</div>
+	<div class="item"><a href="https://manybooks.net/titles/henneyn2302523025-8.html">
+			<img src="{{ url_for('static', filename='/img/PB/Business.jpg') }}" alt="Forest" width="240"
+				height="240"></a>
+	</div>
+	<div class="item"><a href="https://manybooks.net/titles/cranew4796747967-h.html">
+			<img src="{{ url_for('static', filename='/img/PB/Bases.jpeg') }}" alt="Forest" width="240" height="240"></a>
+	</div>
+</div>
+
+<br>
+<br>
+<br>
+
+
+<h1>History</h1>
+<br>
+
+<div class="wrapper">
+	<div class="item"><a href="https://www.gutenberg.org/ebooks/2850">
+			<img src="{{ url_for('static', filename='/img/History/History1.jpg') }}" alt="Forest" width="240"
+				height="240"></a>
+	</div>
+	<div class="item"><a href="https://manybooks.net/titles/wellshgother08Outline_of_History.html">
+			<img src="{{ url_for('static', filename='/img/History/OH.jpg') }}" alt="Forest" width="240"
+				height="240"></a>
+	</div>
+	<div class="item"><a href="https://manybooks.net/titles/watersc2472624726-8.html">
+			<img src="{{ url_for('static', filename='/img/History/Clara.jpg') }}" alt="Forest" width="240"
+				height="240"></a>
+	</div>
+	<div class="item"><a href="https://manybooks.net/titles/dasguptas12951295612956-8.html">
+			<img src="{{ url_for('static', filename='/img/History/Indian.jpg') }}" alt="Forest" width="240"
+				height="240"></a>
+	</div>
+	<div class="item"><a href="https://manybooks.net/titles/beamishr1899318993.html">
+			<img src="{{ url_for('static', filename='/img/History/WW.jpg') }}" alt="Forest" width="240"
+				height="240"></a>
+	</div>
+	<div class="item"><a href="https://www.gutenberg.org/ebooks/205">
+			<img src="{{ url_for('static', filename='/img/History/Walden.jpg') }}" alt="Forest" width="240"
+				height="240"></a>
+	</div>
+	<div class="item"><a href="https://manybooks.net/titles/mahana1352913529-8.html">
+			<img src="{{ url_for('static', filename='/img/History/Sea.jpg') }}" alt="Forest" width="240"
+				height="240"></a>
+	</div>
+</div>
+
+<br>
+<br>
+<br>
+
+<h1>Chemistry</h1>
+<br>
+
+<div class="wrapper">
+	<div class="item"><a href="https://manybooks.net/titles/hendersonw2084820848-8.html">
+			<img src="{{ url_for('static', filename='/img/Chemistry/chem1.jpg') }}" alt="Forest" width="240"
+				height="240"></a>
+	</div>
+	<div class="item"><a href="https://manybooks.net/titles/lavoisiera3077530775-8.html">
+			<img src="{{ url_for('static', filename='/img/Chemistry/chem2.jpg') }}" alt="Forest" width="240"
+				height="240"></a>
+	</div>
+	<div class="item"><a href="https://manybooks.net/titles/legal-chemistry">
+			<img src="{{ url_for('static', filename='/img/Chemistry/chem3.jpg') }}" alt="Forest" width="240"
+				height="240"></a>
+	</div>
+	<div class="item"><a href="https://www.gutenberg.org/ebooks/50446">
+			<img src="{{ url_for('static', filename='/img/Chemistry/chem4.jpg') }}" alt="Forest" width="240"
+				height="240"></a>
+	</div>
+	<div class="item"><a href="https://www.gutenberg.org/ebooks/1234">
+			<img src="{{ url_for('static', filename='/img/Chemistry/chem5.jpg') }}" alt="Forest" width="240"
+				height="240"></a>
+	</div>
+</div>
+
+
+<br>
+<br>
+<br>
+
+
+<h1>Biology</h1>
+<br>
+
+<div class="wrapper">
+	<div class="item"><a href="https://www.gutenberg.org/ebooks/22748">
+			<img src="{{ url_for('static', filename='/img/Biology/entomology.jpeg') }}" alt="Forest" width="240"
+				height="240"></a>
+	</div>
+	<div class="item"><a href="https://www.gutenberg.org/ebooks/3332">
+			<img src="{{ url_for('static', filename='/img/Biology/dom.jpg') }}" alt="Forest" width="240"
+				height="240"></a>
+	</div>
+	<div class="item"><a href="https://www.gutenberg.org/ebooks/24708">
+			<img src="{{ url_for('static', filename='/img/Biology/biol.jpeg') }}" alt="Forest" width="240"
+				height="240"></a>
+	</div>
+	<div class="item"><a href="https://www.gutenberg.org/ebooks/19192">
+			<img src="{{ url_for('static', filename='/img/Biology/dwar.jpg') }}" alt="Forest" width="240"
+				height="240"></a>
+	</div>
+	<div class="item"><a href="https://www.gutenberg.org/ebooks/23434">
+			<img src="{{ url_for('static', filename='/img/Biology/ins.jpg') }}" alt="Forest" width="240"
+				height="240"></a>
+	</div>
+	<div class="item"><a href="https://www.gutenberg.org/ebooks/22764">
+			<img src="{{ url_for('static', filename='/img/Biology/os.jpg') }}" alt="Forest" width="240"
+				height="240"></a>
+	</div>
+</div>
+
+<br>
+<br>
+<br>
+
+
+<h1>Physics</h1>
+<br>
+
+<div class="wrapper">
+	<div class="item"><a href="https://manybooks.net/titles/poincarel15201520715207-8.html">
+			<img src="{{ url_for('static', filename='/img/Physics/new.jpeg') }}" alt="Forest" width="240"
+				height="240"></a>
+	</div>
+	<div class="item"><a href="https://manybooks.net/titles/on-line-data-acquisition-systems-in-nuclear-physics">
+			<img src="{{ url_for('static', filename='/img/Physics/ph.jpg') }}" alt="Forest" width="240"
+				height="240"></a>
+	</div>
+	<div class="item"><a href="https://www.gutenberg.org/ebooks/36276">
+			<img src="{{ url_for('static', filename='/img/Physics/rel.jpeg') }}" alt="Forest" width="240"
+				height="240"></a>
+	</div>
+	<div class="item"><a href="https://www.gutenberg.org/ebooks/43006">
+			<img src="{{ url_for('static', filename='/img/Physics/sp.jpg') }}" alt="Forest" width="240"
+				height="240"></a>
+	</div>
+	<div class="item"><a href="https://www.gutenberg.org/ebooks/39017">
+			<img src="{{ url_for('static', filename='/img/Physics/eg.jpg') }}" alt="Forest" width="240"
+				height="240"></a>
+	</div>
+	<div class="item"><a href="https://www.gutenberg.org/ebooks/40175">
+			<img src="{{ url_for('static', filename='/img/Physics/phh.jpg') }}" alt="Forest" width="240"
+				height="240"></a>
+	</div>
+</div>
+
+{% endblock %}

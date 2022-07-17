@@ -1,0 +1,117 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="btn-group">
+	<button class="btn btn-secondary btn-sm" type="button">
+		Topic
+	</button>
+	<button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split"
+		data-bs-toggle="dropdown" aria-expanded="false">
+		<span class="visually-hidden">Toggle Dropdown</span>
+	</button>
+	<ul class="dropdown-menu">
+		<li><a class="dropdown-item" href="/designv">Design</a></li>
+		<li><a class="dropdown-item" href="/programming">Programming</a></li>
+        <li><a class="dropdown-item" href="/marketing">Marketing & Sales</a></li>
+		<li><a class="dropdown-item" href="/music">Music and Sound</a></li>
+		<li>
+			<hr class="dropdown-divider">
+		</li>
+		<li><a class="dropdown-item" href="/books">Books</a></li>
+	</ul>
+</div>
+<br>
+<br>
+<h2>Courses</h2>
+
+<br>
+<div class="card-deck">
+  <div class="card">
+    <iframe class="item" src="https://www.youtube.com/embed/nU-IIXBWlS4"></iframe>
+    <div class="card-body">
+      <h5 class="card-title">Audio Production Funadmentals</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
+        This content is a little bit longer.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <iframe class="item" src="https://www.youtube.com/embed/UZu5orpKtJs"></iframe>
+    <div class="card-body">
+      <h5 class="card-title">The power of sound design</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <iframe class="item" src="https://www.youtube.com/embed/pmCH5qhEg1c"></iframe>
+    <div class="card-body">
+      <h5 class="card-title">How to make song in FL Studio</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
+        This card has even longer content than the first to show that equal height action.</p>
+    </div>
+  </div>
+</div>
+
+<br>
+<div class="card-deck">
+  <div class="card">
+    <iframe class="item" src="https://www.youtube.com/embed/I3Dk3i4GpU8"></iframe>
+    <div class="card-body">
+      <h5 class="card-title">Logic pro x tutorial</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
+        This content is a little bit longer.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <iframe class="item" src="https://www.youtube.com/embed/69dLyztc-As"></iframe>
+    <div class="card-body">
+      <h5 class="card-title">Frequency and Equalization</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <iframe class="item" src="https://www.youtube.com/embed/P6ksqvy4Ue0"></iframe>
+    <div class="card-body">
+      <h5 class="card-title">Studio One 5 tutorial</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
+        This card has even longer content than the first to show that equal height action.</p>
+    </div>
+  </div>
+</div>
+
+
+<br>
+
+
+<div class="card-deck">
+  <div class="card">
+    <iframe class="item" src="hhttps://www.youtube.com/embed/ghFwpoH71NM"></iframe>
+    <div class="card-body">
+      <h5 class="card-title">Beat making tutorial</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
+        This content is a little bit longer.</p>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+
+<h2>Books</h2>
+
+<br>
+
+<div class="wrapper">
+	<div class="item"><a href="https://manybooks.net/titles/moorea1828418284-8.html">
+		<img src="{{ url_for('static', filename='/img/Music/Musicl.jpg') }}" alt="Forest" width="240" height="240"></a>
+    <h4>For Every Music Lover<br>
+        A Series of Practical Essays<br>
+         on Music
+        </h4>
+	</div>
+	<div class="item"><a href="https://manybooks.net/titles/shakespeetext981ws4610.html">
+		<img src="{{ url_for('static', filename='/img/Music/notes.jpg') }}" alt="Forest" width="240" height="240"></a>
+    <h4>Sonnets to Sundry Notes of Music</h4>
+	</div>
+{% endblock %}

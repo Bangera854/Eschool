@@ -1,0 +1,11 @@
+#Pending
+@app.route('/contact')
+def contact():
+    name=request.form.get('name')
+    email=request.form.get('email')
+    phone_no=request.form.get('phone_no')
+    msg=request.form.get('msg')
+    cursor.execute("""INSERT INTO `users` (`id`, `name`, `email`, `phone_no`, `msg`, `date`) VALUES
+    (NULL,'{}','{}','{}','{}','{}')""".format(name,email,phone_no,msg=msg))
+    conn.commit()
+    return render_template('contact.html')

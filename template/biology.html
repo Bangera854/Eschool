@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div class="btn-group">
+	<button class="btn btn-secondary btn-sm" type="button">
+		Topic
+	</button>
+	<button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split"
+		data-bs-toggle="dropdown" aria-expanded="false">
+		<span class="visually-hidden">Toggle Dropdown</span>
+	</button>
+	<ul class="dropdown-menu">
+		<li><a class="dropdown-item" href="/history">History</a></li>
+		<li><a class="dropdown-item" href="/chemistry">Chemistry</a></li>
+		<li><a class="dropdown-item" href="/biology">Biology</a></li>
+		<li><a class="dropdown-item" href="/physics">Physics</a></li>
+		<li>
+			<hr class="dropdown-divider">
+		</li>
+		<li><a class="dropdown-item" href="/course">Course</a></li>
+	</ul>
+</div>
+
+<br>
+
+<h2>Biology</h2>
+<br>
+<div class="wrapper">
+	<div class="item"><a href="https://www.gutenberg.org/ebooks/22748">
+		<img src="{{ url_for('static', filename='/img/Biology/entomology.jpeg') }}" alt="Forest" width="240" height="240"></a>
+	</div>
+	<div class="item"><a href="https://www.gutenberg.org/ebooks/3332">
+		<img src="{{ url_for('static', filename='/img/Biology/dom.jpg') }}" alt="Forest" width="240" height="240"></a>
+	</div>
+	<div class="item"><a href="https://www.gutenberg.org/ebooks/24708">
+		<img src="{{ url_for('static', filename='/img/Biology/biol.jpeg') }}" alt="Forest" width="240" height="240"></a>
+	</div>
+	<div class="item"><a href="https://www.gutenberg.org/ebooks/19192">
+		<img src="{{ url_for('static', filename='/img/Biology/dwar.jpg') }}" alt="Forest" width="240" height="240"></a>
+	</div>
+	<div class="item"><a href="https://www.gutenberg.org/ebooks/23434">
+		<img src="{{ url_for('static', filename='/img/Biology/ins.jpg') }}" alt="Forest" width="240" height="240"></a>
+	</div>
+	<div class="item"><a href="https://www.gutenberg.org/ebooks/22764">
+		<img src="{{ url_for('static', filename='/img/Biology/os.jpg') }}" alt="Forest" width="240" height="240"></a>
+	</div>
+</div>
+
+{% endblock %}
